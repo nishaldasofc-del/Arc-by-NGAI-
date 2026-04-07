@@ -8,18 +8,21 @@ import Signup from './pages/Signup';
 import Intro from './pages/Intro';
 import Builder from './pages/Builder';
 import { AuthProvider } from './contexts/AuthContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 export default function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Signup />} />
-          <Route path="/intro" element={<Intro />} />
-          <Route path="/builder" element={<Builder />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Router>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Signup />} />
+            <Route path="/intro" element={<Intro />} />
+            <Route path="/builder" element={<Builder />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Router>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }

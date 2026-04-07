@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
@@ -7,6 +9,6 @@
 
 @layer base {
   body {
-    @apply bg-[#0A0A0A] text-white antialiased;
+    @apply bg-white text-gray-900 dark:bg-[#0A0A0A] dark:text-white antialiased transition-colors duration-200;
   }
 }
