@@ -59,7 +59,7 @@ type ProjectFile = {
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
-const BASE_URL = 'https://zenoai-uflq.onrender.com';
+const BASE_URL = 'https://zenoai-1.onrender.com';
 const ANTHROPIC_MODEL = 'claude-sonnet-4-20250514';
 
 const SUGGESTIONS = [
